@@ -1,14 +1,6 @@
 ## Set graphics device details
-.define.fonts <- function(){
-    grDevices::quartzFonts(
-        raleway = c("Raleway-Light", "Raleway-SemiBold",
-                    "Raleway-LightItalic", "Raleway-SemiBoldItalic"),
-        opensans = c("OpenSans", "OpenSans-Bold", "OpenSans-Italic",
-                     "OpenSans-BoldItalic"))
-}
 setHook(packageEvent("grDevices", "onLoad"), function(...){
-    .define.fonts()
-    grDevices::quartz.options(family = "raleway", height = 6, width = 6)
+    grDevices::quartz.options(height = 6, width = 6)
 })
 
 ## For major upgrades, reinstall all packages
