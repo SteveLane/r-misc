@@ -23,4 +23,4 @@ local({
 options(digits = 3, show.signif.stars = FALSE, stringsAsFactors = FALSE)
 
 ## Change printing
-options(max.print = 100, scipen = 10)
+options(max.print = 1000, scipen = 10)
