@@ -15,7 +15,7 @@ setHook(packageEvent("grDevices", "onLoad"), function(...){
 ## Set the repository
 local({
   r <- getOption("repos")
-  r["CRAN"] <- "https://cran.ms.unimelb.edu.au"
+  r["CRAN"] <- "https://cran.csiro.au/"
   options(repos = r)
 })
 
