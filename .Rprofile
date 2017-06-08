@@ -1,8 +1,20 @@
 ## Set graphics device details
 setHook(packageEvent("grDevices", "onLoad"), function(...){
-    grDevices::quartz.options(height = 6, width = 6)
+    grDevices::quartzFonts(
+                   mono = paste0("Hack-",
+                                 c("Regular", "Bold", "Italic", "BoldItalic")))
+    grDevices::quartz.options(height = 6, width = 6, family = "mono")
 })
-
+setHook(packageEvent("Cairo", "onLoad"), function(...){
+    Cairo::CairoFonts(
+               regular="Hack:style=Regular",
+               bold="Hack:style=Bold",
+               italic="Hack:style=Italic",
+               bolditalic="Hack:style=BoldItalic",
+               symbol="Symbol"
+           )
+})
+    
 ## For major upgrades, reinstall all packages
 .major.upgrades <- function(){
     install.packages(
