@@ -1,16 +1,16 @@
 ## Set graphics device details
 setHook(packageEvent("grDevices", "onLoad"), function(...){
     grDevices::quartzFonts(
-                   mono = paste0("Hack-",
+                   mono = paste0("Iosevka-",
                                  c("Regular", "Bold", "Italic", "BoldItalic")))
     grDevices::quartz.options(height = 6, width = 6, family = "mono")
 })
 setHook(packageEvent("Cairo", "onLoad"), function(...){
     Cairo::CairoFonts(
-               regular="Hack:style=Regular",
-               bold="Hack:style=Bold",
-               italic="Hack:style=Italic",
-               bolditalic="Hack:style=BoldItalic",
+               regular="Iosevka:style=Regular",
+               bold="Iosevka:style=Bold",
+               italic="Iosevka:style=Italic",
+               bolditalic="Iosevka:style=BoldItalic",
                symbol="Symbol"
            )
 })
