@@ -1,9 +1,9 @@
 ## Set graphics device details
 setHook(packageEvent("grDevices", "onLoad"), function(...){
-    grDevices::quartzFonts(
-                   mono = paste0("Iosevka-",
-                                 c("Regular", "Bold", "Italic", "BoldItalic")))
-    grDevices::quartz.options(height = 6, width = 6, family = "mono")
+    ## grDevices::quartzFonts(
+    ##                mono = paste0("Iosevka-",
+    ##                              c("Regular", "Bold", "Italic", "BoldItalic")))
+    ## grDevices::quartz.options(height = 6, width = 6, family = "mono")
 })
 setHook(packageEvent("Cairo", "onLoad"), function(...){
     Cairo::CairoFonts(
@@ -32,10 +32,10 @@ local({
 })
 
 ## Change digits, stars and strings
-options(digits = 3, show.signif.stars = FALSE, stringsAsFactors = FALSE)
+options(digits = 3, show.signif.stars = FALSE)
 
 ## Change printing
 options(max.print = 1000, scipen = 10)
 
 ## Change R prompt
-options(prompt = "🍺 > ")
+## options(prompt = " > ")
