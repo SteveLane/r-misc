@@ -39,3 +39,6 @@ options(max.print = 1000, scipen = 10)
 
 ## Change R prompt
 ## options(prompt = " > ")
+
+## Make R use multiple cores whilst compiling packages
+options(Ncpus = 6)
